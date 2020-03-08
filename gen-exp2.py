@@ -10,7 +10,7 @@ posflatconv = GP.GP_SymReg(500,100,0.01)
 posflatconv.load("pos-flat-convertor.model")
 
 
-sizeworld = (4096,1024)
+sizeworld = (1024,256)
 szd = int((sizeworld[0] * sizeworld[1])/2)
 
 
@@ -31,7 +31,7 @@ def func1(i):
 			if y1 != 0:
 				image.putpixel((x,y),(((i%8)*y2)%256,((i%16)*y2)%256,((i%4)*y2)%256))
 			
-with Pool(12) as p:
+with Pool(16) as p:
 	print(p.map(func1, range(1,255)))			
 
 image.save("g-exp3-0.png", "PNG")
