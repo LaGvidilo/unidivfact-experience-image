@@ -9,7 +9,7 @@ posflatconv = GP.GP_SymReg(500,100,0.01)
 posflatconv.load("pos-flat-convertor.model")
 
 
-sizeworld = (512,512)
+sizeworld = (128,128)
 szd = int((sizeworld[0] * sizeworld[1])/2)
 
 
