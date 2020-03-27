@@ -37,6 +37,6 @@ def f(xn):
 
 
 if __name__ == '__main__':
-    with Pool(10) as p:
-        print(p.map(f, range(301,450)))
+    with Pool(13) as p:
+        print(p.map(f, range(460,512)))
 
